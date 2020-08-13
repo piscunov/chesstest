@@ -4,11 +4,11 @@ public class PieceType {
 
 	public static Piece getPiece(String inputPiece) {
 		char color = inputPiece.charAt(0);
-		char pieceType = inputPiece.charAt(1);
+		char pieceId = inputPiece.charAt(1);
 		
 		
 		Piece piece=null;
-		switch(pieceType) {
+		switch(pieceId) {
 		case 'C':
 			piece = new Horse();
 			break;	

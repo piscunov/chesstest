@@ -17,10 +17,10 @@ public class Main {
 			String board[][] = new String[8][8];
 			for(int i=0;i<8;i++) {
 				String row = br.readLine();
-				String rowArr[]=row.split(" ");
+				String rowArray[]=row.split(" ");
 				if(row.trim()!="")
 				for(int j=0;j<8;j++) {
-					board[i][j] = rowArr[j];
+					board[i][j] = rowArray[j];
 				}
 			}
 			DisplayBoard.initialize(board);
