@@ -2,10 +2,11 @@ package chess;
 
 public class PieceType {
 
+	
 	public static Piece getPiece(String inputPiece) {
 		char color = inputPiece.charAt(0);
 		char pieceId = inputPiece.charAt(1);
-		
+		}
 		
 		Piece piece=null;
 		switch(pieceId) {
@@ -33,6 +34,8 @@ public class PieceType {
 		piece.setColor(color);
 			
 		return piece;
+		
+	
 	}
 	
 }

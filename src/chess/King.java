@@ -1,6 +1,10 @@
 package chess;
 
+import java.util.Collection;
+
 public class King extends Piece {
+	
+
 
 	@Override
 	public boolean validatePiece(int X, int Y, int destX, int destY) {
@@ -9,4 +13,6 @@ public class King extends Piece {
 		return false;
 	}
 
+	
+	
 }

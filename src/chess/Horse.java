@@ -13,4 +13,28 @@ public class Horse extends Piece {
 		return false;
 	}
 
+	
+	/* 
+	 * PSEUDOCOD:
+	 * crearea unei Colectii de tipul PieceType care salveaza posibilele mutari
+	 * array[][] care zice cum se deplaseaza calul pe matrice : 
+	 * {-2 ; 1},
+	 * {-1, 2},
+	 * {1, 2},
+	 * {2, 1},
+	 * {2, -1},
+	 * {1, -2},
+	 * {-2, -1}
+	 * 
+	 * pentru fiecare prima patratica din jur, putem sa mergem 2 in lateral ( forma de L)
+	 * daca locul matricii unde dorim este liber conform miscarii calului sau exista un inamic 
+	 *  rezulta possibleMoves.add
+	 *  
+	 *	else 
+	 *	throw new Exception ("Nu poti muta");
+	 *
+	 *returneaza possibilele mutari;
+	 *
+	 */
+	
 }

@@ -1,8 +1,12 @@
 package chess;
 
+import java.util.Collection;
+
 public abstract class Piece {
 
 private char color;
+private String pieceId;
+
 	
 	public char getColor() {
 		return color;
@@ -11,7 +15,10 @@ private char color;
 	public void setColor(char color) {
 		this.color = color;
 	}
-
+	
+	public boolean isBlack() {
+		return true;
+	}
 	
 	public abstract boolean validatePiece(int X, int Y, int destX, int destY);
 	
@@ -64,5 +71,29 @@ private char color;
 		}
 		return true;
 	}
+	
+	public abstract Collection<PieceType> getPossibleMoves();
+
+	public abstract Collection<PieceType> generatePossibleMoves();
+	
+	public boolean isOpponent(Piece piece) {
+		return piece != null &&  getColor() != piece.getColor();
+	}
+	
+	
+	
+	public void printPossibleMoves(String pieceId, Move moves) {
+		generatePossibleMoves();
+		getPossibleMoves().stream().forEach((_item) -> {
+			if(isOpponent(_item.getPiece(pieceId))) {
+				moves.color = 'I'; // Inamic
+				
+			}
+			else {
+				moves.color = 'F';//Familie
+			}
+		});
+	}
+	
 	
 }
